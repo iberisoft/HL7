@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Pavel Zaytsev</Authors>
+    <Description>HL7 network library</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HL7\HL7.csproj" />
+  </ItemGroup>
+
+</Project>
