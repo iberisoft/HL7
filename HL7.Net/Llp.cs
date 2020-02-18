@@ -6,7 +6,7 @@ namespace HL7.Net
 {
     static class Llp
     {
-        static Encoding m_Encoding = Encoding.UTF8;
+        static readonly Encoding m_Encoding = Encoding.UTF8;
 
         public static string ReadMessage(Stream stream)
         {

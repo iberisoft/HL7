@@ -5,15 +5,15 @@ namespace HL7
 {
     public static class StringConverter
     {
-        public static string FromDate(DateTime src) => src.ToString("yyyyMMdd");
+        public static string FromDate(DateTime source) => source.ToString("yyyyMMdd");
 
-        public static string FromDateTime(DateTime src) => src.ToString("yyyyMMddHHmmss");
+        public static string FromDateTime(DateTime source) => source.ToString("yyyyMMddHHmmss");
 
-        public static DateTime? ToDateTime(string src)
+        public static DateTime? ToDateTime(string source)
         {
-            if (src != null)
+            if (source != null)
             {
-                return DateTime.ParseExact(src, new[] { "yyyy", "yyyyMM", "yyyyMMdd", "yyyyMMddHH", "yyyyMMddHHmm", "yyyyMMddHHmmss" }, null, DateTimeStyles.None);
+                return DateTime.ParseExact(source, new[] { "yyyy", "yyyyMM", "yyyyMMdd", "yyyyMMddHH", "yyyyMMddHHmm", "yyyyMMddHHmmss" }, null, DateTimeStyles.None);
             }
             else
             {

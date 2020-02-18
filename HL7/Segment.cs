@@ -33,7 +33,7 @@ namespace HL7
             }
         }
 
-        public Segment(Message message, Segment src)
+        public Segment(Message message, Segment source)
         {
             if (message == null)
             {
@@ -41,7 +41,7 @@ namespace HL7
             }
 
             m_Message = message;
-            FromString(src.ToString());
+            FromString(source.ToString());
         }
 
         internal List<Field> Fields { get; } = new List<Field>();
