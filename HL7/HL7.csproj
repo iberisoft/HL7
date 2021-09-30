@@ -3,10 +3,10 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>Pavel Zaytsev</Authors>
-    <Description>HL7 basic library</Description>
-    <PackageTags>hl7 net-core</PackageTags>
+    <Description>HL7 basic library.</Description>
+    <PackageTags>hl7</PackageTags>
     <RepositoryUrl>https://github.com/iberisoft/HL7</RepositoryUrl>
-    <Copyright>Copyright © 2011-2020</Copyright>
+    <Copyright>Copyright © 2021</Copyright>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
   </PropertyGroup>
