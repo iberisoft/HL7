@@ -7,7 +7,6 @@
     <Copyright>Copyright © 2021</Copyright>
     <RepositoryUrl>https://github.com/iberisoft/HL7</RepositoryUrl>
     <PackageTags>hl7</PackageTags>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <Version>1.0.1</Version>
   </PropertyGroup>
