@@ -1,7 +1,6 @@
 # HL7
 
 ![.NET Core](https://github.com/iberisoft/HL7/workflows/.NET%20Core/badge.svg)
-[![NuGet](https://img.shields.io/nuget/vpre/HL7.svg)](https://www.nuget.org/profiles/iberisoft)
 [![MIT](https://img.shields.io/github/license/iberisoft/HL7.svg)](LICENSE.md)
 
 These libraries started to develop in 2011 as a part of big proprietary platform, its HL7 brokers are based on them.
