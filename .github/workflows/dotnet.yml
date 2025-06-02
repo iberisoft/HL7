@@ -1,4 +1,4 @@
-name: .NET Core
+name: .NET
 
 on: [push]
 
@@ -9,9 +9,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Setup .NET Core
+    - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.x
-    - name: Build with dotnet
+    - name: Build
       run: dotnet build --configuration Release
