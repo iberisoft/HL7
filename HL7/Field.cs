@@ -4,7 +4,7 @@ namespace HL7
 {
     class Field
     {
-        Message m_Message;
+        readonly Message m_Message;
 
         public Field(Message message)
         {

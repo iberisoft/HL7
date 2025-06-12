@@ -6,7 +6,7 @@ namespace HL7
 {
     public class Segment
     {
-        Message m_Message;
+        readonly Message m_Message;
 
         internal Segment(Message message)
         {
@@ -15,16 +15,12 @@ namespace HL7
 
         public Segment(Message message, string name)
         {
-            if (message == null)
-            {
-                throw new ArgumentNullException(nameof(message));
-            }
             if (name.Length != 3)
             {
                 throw new ArgumentException("Must have 3 characters", nameof(name));
             }
 
-            m_Message = message;
+            m_Message = message ?? throw new ArgumentNullException(nameof(message));
             Fields.Add(new Field(m_Message, name));
             if (name == "MSH")
             {
@@ -35,12 +31,7 @@ namespace HL7
 
         public Segment(Message message, Segment source)
         {
-            if (message == null)
-            {
-                throw new ArgumentNullException(nameof(message));
-            }
-
-            m_Message = message;
+            m_Message = message ?? throw new ArgumentNullException(nameof(message));
             FromString(source.ToString());
         }
 

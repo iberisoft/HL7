@@ -11,10 +11,6 @@ namespace HL7.Net
 
         public void Listen(string address, int port, int maxConnections)
         {
-            if (address == null)
-            {
-                throw new ArgumentNullException(nameof(address));
-            }
             if (port <= 0 || port >= 0x10000)
             {
                 throw new ArgumentOutOfRangeException(nameof(port));
@@ -28,7 +24,7 @@ namespace HL7.Net
                 throw new InvalidOperationException("Already listening");
             }
 
-            Address = address;
+            Address = address ?? throw new ArgumentNullException(nameof(address));
             Port = port;
             m_Listener = new TcpListener(address != "" ? IPAddress.Parse(address) : IPAddress.Any, port);
             m_Listener.Start();

@@ -9,10 +9,6 @@ namespace HL7.Net
 
         public void Connect(string address, int port)
         {
-            if (address == null)
-            {
-                throw new ArgumentNullException(nameof(address));
-            }
             if (port <= 0 || port >= 0x10000)
             {
                 throw new ArgumentOutOfRangeException(nameof(port));
@@ -22,7 +18,7 @@ namespace HL7.Net
                 throw new InvalidOperationException("Already connected");
             }
 
-            Address = address;
+            Address = address ?? throw new ArgumentNullException(nameof(address));
             Port = port;
             m_Client = new TcpClient(address, port);
         }
